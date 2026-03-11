@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--defer : HTML 파싱이 끝난 뒤 script 실행-->
+    <script src="app.js" defer></script>
+
+    <script>
+      //document객체는 웹 페이지 최상위 DOM 요소
+      console.log(document);
+
+      // HTML Collection
+      // document에서 getElements~로 찾아온 요소들의 묶음
+      // 유사 배열 (배열 메소드 사용 불가)
+      let li = document.getElementsByTagName('li');
+      console.log(li);
+      // $ 관례적으로 요소 노드를 선택할 때 사용
+      const $h1 = document.getElementById('header');
+
+      $h1.style.color = 'red';
+    </script>
+  </head>
+
+  <body>
+    <h1>DOM 구조</h1>
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque minima
+        distinctio dignissimos reiciendis nemo consectetur laudantium et, sint
+        maxime officiis, nihil sit, dolorum maiores ducimus molestiae alias
+        praesentium qui ab eos assumenda ipsam quis! Quos repellat voluptatum
+        maiores fuga iusto, esse consectetur nobis facilis doloribus! Cumque
+        laudantium non possimus quod?
+      </p>
+
+      <ul>
+        <li>항목</li>
+        <li>항목</li>
+        <li>항목</li>
+      </ul>
+    </div>
+  </body>
+</html>
